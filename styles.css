@@ -15,6 +15,12 @@ object-fit: cover;
 
 /* General styles */
 
+.event-image {
+  width: 80%; /* adjust the width to your liking */
+  margin: 0 auto; /* center the image horizontally */
+  height: auto; /* maintain the image's aspect ratio */
+}
+
 .about img {
 width: 100%;
 height: auto;
