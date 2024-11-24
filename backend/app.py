@@ -1,5 +1,6 @@
 #Solely coded by Denvil with ♥️
 
+
 from flask import Flask, request, jsonify
 import secrets
 
@@ -16,8 +17,9 @@ def handle_submission():
     email = data.get('email')
     message = data.get('message')
 
-    # You can add your own logic here to handle the form submission
-    # For example, you can save the data to a database or send an email
+    # Save the message to a file
+    with open('messages.txt', 'a') as file:
+        file.write(f"Name: {name}\nEmail: {email}\nMessage: {message}\n\n")
 
     return jsonify({'message': 'Form submitted successfully!'})
 
