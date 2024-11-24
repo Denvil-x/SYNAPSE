@@ -133,12 +133,39 @@
 <p style="font-size: 18px;">Phone: 011-23239271</p>
 <p style="font-size: 18px;">Email :synapse@mamc.ac.in</p>
 <img src="Img/IMG_3328.png" alt="MAMC Synapse" class="event-image">
-<form id="contact-form" action="/submit" method="post">
-<input type="text" name="name" placeholder="Name" style="width: 100%; height: 40px; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc;">
-<input type="email" name="email" placeholder="Email" style="width: 100%; height: 40px; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc;">
-<textarea name="message" placeholder="Message" style="width: 100%; height: 100px; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc;"></textarea>
-<button style="background-color: #3377b2; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+<form id="contact-form" method="post" action="/submit">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">
+
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+
+
+<label for="message">Message:</label>
+<textarea id="message" name="message"></textarea>
+
+
+<button type="submit">Send</button>
 </form>
+<script>
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', async (e) => {
+e.preventDefault();
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const message = document.getElementById('message').value;
+const response = await fetch('/submit', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({ name, email, message })
+});
+const data = await response.json();
+console.log(data);
+});
+</script>
 </div>
 </section>
 
