@@ -21,6 +21,31 @@ object-fit: cover;
   height: auto; /* maintain the image's aspect ratio */
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #2f2f2f;
+  padding: 10px;
+  border-top: 1px solid #3f3f3f;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dev-link {
+  color: #66d9ef;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: 'Playfair Display', serif;
+}
+
+.dev-link:hover {
+  color: #1abc9c;
+}
 .about img {
 width: 100%;
 height: auto;
