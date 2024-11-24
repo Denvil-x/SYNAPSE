@@ -48,6 +48,9 @@ right: 20px;
   margin-bottom: 10px;
 }
 
+.events-grid {
+  color: #333; /* sets text color to a darker gray */
+}
 .about p {
   font-size: 18px;
   margin-bottom: 20px;
