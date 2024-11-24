@@ -9,7 +9,18 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+.logo {
+position: absolute;
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+}
 
+.right-image {
+position: absolute;
+top: 20px;
+right: 20px;
+}
 .hero {
   background-image: linear-gradient(to bottom, #003399, #3377b2);
   color: #fff;
