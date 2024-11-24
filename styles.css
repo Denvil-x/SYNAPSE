@@ -3,7 +3,25 @@ body {
   margin: 0;
   padding: 0;
 }
+/* Safari-specific styles */
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.about img {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+}
+
+/* General styles */
+
+.about img {
+width: 100%;
+height: auto;
+object-fit: cover;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
