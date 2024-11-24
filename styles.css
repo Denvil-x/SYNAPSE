@@ -222,17 +222,29 @@ footer {
   text-align: center;
 }
 
-footer p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-footer a {
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   color: #fff;
-  text-decoration: none;
+  background-color: #2f2f2f;
+  padding: 5px;
+  border-top: 1px solid #3f3f3f;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-size: 12px;
+  z-index: 1; /* Add this line */
 }
 
-footer a:hover {
-  color: #ccc;
+.dev-link {
+  color: #66d9ef;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 12px;
+}
+
+.dev-link:hover {
+  color: #1abc9c;
 }
 
 /* Responsive Design */
